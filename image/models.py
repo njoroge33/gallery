@@ -13,3 +13,9 @@ class Images(models.Model):
     image_description = models.CharField(max_length=30)
     location = models.ForeignKey(Location, on_delete=models.CASCADE,)
     category = models.ForeignKey(Category, on_delete=models.CASCADE,)
+
+    @classmethod
+    def get_images(cls):
+        images = cls.objects.all()
+        return images
+
