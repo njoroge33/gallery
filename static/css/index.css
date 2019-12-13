@@ -2,3 +2,13 @@ h2 {
     color:white;
     font-family: 'Monoton', cursive;
 }
+
+.body {
+    background-image: url("https://static.bhphotovideo.com/explora/sites/default/files/TS-Night-Photography.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+    font-family: 'Creepster', cursive;
+    font-size: 30px;
+    height: 90vh;
+}
