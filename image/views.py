@@ -1,10 +1,11 @@
 from django.shortcuts import render
-from .models import Images
+from .models import Images, Location
 
 # Create your views here.
 def index(request):
     images=Images.get_images()
-    return render(request, 'index.html', {'images':images})
+    locations = Location.get_locations()
+    return render(request, 'index.html', {'images':images, "locations":locations})
 
 def search_results(request):
     if 'category' in request.GET and request.GET["category"]:

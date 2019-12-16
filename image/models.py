@@ -7,6 +7,11 @@ class Category(models.Model):
 class Location(models.Model):
     location_name = models.CharField(max_length=30)
 
+    @classmethod
+    def get_locations(cls):
+        locations = cls.objects.all()
+        return locations
+
 class Images(models.Model):
     your_image = models.ImageField(upload_to = 'images/')
     image_name = models.CharField(max_length=30)
