@@ -1,4 +1,4 @@
-#gallery
+# gallery
 
 #### This is my personal gallery website where you can see photos that I have uploaded.
 
