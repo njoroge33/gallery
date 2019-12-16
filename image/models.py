@@ -19,6 +19,12 @@ class Images(models.Model):
     location = models.ForeignKey(Location, on_delete=models.CASCADE,)
     category = models.ForeignKey(Category, on_delete=models.CASCADE,)
 
+    def save_images():
+        self.save()
+
+    def delete_images():
+        self.delete()
+        
     @classmethod
     def get_images(cls):
         images = cls.objects.all()
