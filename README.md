@@ -1,4 +1,4 @@
-# gallery
+# Gallery
 
 #### This is my personal gallery website where you can see photos that I have uploaded.
 
@@ -38,3 +38,12 @@
   python manage.py migrate
   python manage.py runserver
   ```
+
+## Technologies Used
+- Python3.6
+- Django
+
+## License
+MIT &copy;2019 [John Gichuhi](https://github.com/njoroge33)
+Gallery
+
