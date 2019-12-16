@@ -1,15 +1,15 @@
-#**gallery**
+#gallery
 
 #### This is my personal gallery website where you can see photos that I have uploaded.
 
-***## As users you can :
+## As users you can :
 * View different photos that interest me.
 * View different categories of photos.
 *search photos by category
 * Copy a link to the photo to share with my friends.
 ***
 
-***## ~~Usage example~~
+### Usage example
 
 1. Open the website and browse the images.
 2. If you see an image that interests you you can click on it to view it.***
