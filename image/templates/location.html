@@ -1,7 +1,18 @@
 {%extends 'base.html'%}
 
 {%block content%}
-{%for image in images%}
-<h5>{{image.image_name}}</h5>
-{%endfor%}
+
+<div class="container-fluid bg-light" style="padding-bottom:10%;">
+    <div class="container">
+
+        <div class="row">
+            {%for image in images%}
+            <div class="col-sm-6 col-md-4 card">
+                <img src="{{image.your_image.url}}" class="img-responsive" alt="Image" style="height:300px;width:100%;">
+                <h3>{{image.image_name}}</h3>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</div>
 {%endblock%}
