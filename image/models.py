@@ -10,7 +10,7 @@ class Location(models.Model):
 class Images(models.Model):
     your_image = models.ImageField(upload_to = 'images/')
     image_name = models.CharField(max_length=30)
-    image_description = models.CharField(max_length=30)
+    image_description = models.CharField(max_length=250)
     location = models.ForeignKey(Location, on_delete=models.CASCADE,)
     category = models.ForeignKey(Category, on_delete=models.CASCADE,)
 
@@ -18,4 +18,3 @@ class Images(models.Model):
     def get_images(cls):
         images = cls.objects.all()
         return images
-
