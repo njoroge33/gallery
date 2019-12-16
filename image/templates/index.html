@@ -31,8 +31,9 @@
         <h3 class="text-center">There No News Items</h3>
         {% endfor %}
     </div>
+    <h1>Available locations</h1>
     {%for location in locations%}
-    <a href="/location/{{location.location_name}}">{{location.location_name}}</a>
+    <a class="btn btn-primary" href="/location/{{location.location_name}}">{{location.location_name}}</a>
     {%endfor%}
 </div>
 

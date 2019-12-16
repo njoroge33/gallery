@@ -1,25 +1,30 @@
-{%extends 'base.html'%} 
+{%extends 'base.html'%}
 {% block content %}
-<div class="container bg-light"> <br>
+<div class="container-fluid bg-light" style="padding-bottom:10%;"> <br>
+    <div class="container">
+        <div class="row">
+            {% if pics%}
+            <h3>Found {{ pics|length }} of searched term {{message}}</h3>
+            <hr>
+            {% else %}
+            <h3> Found 0 photos for the search term {{message}}</h3>
+            <hr>
+            {% endif %}
 
-  <div class="row">
-    {% if pics%}
-      <h3>Found {{ pics|length }} of searched term {{message}}</h3> <hr>
-    {% else %}
-      <h3> Found 0 photos for the search term {{message}}</h3> <hr>
-    {% endif %}
+        </div>
 
-  </div>
+        <div class="row">
 
-  <div class="row">
-
-  {% if pics %}
-    {% for pic in pics %}
-      <div class="col-sm-6 col-md-3">
-          <h3>{{pic.image_name}}</h3>
-      </div>
-    {% endfor %}
-  {% endif %}
-  </div>
+            {% if pics %}
+            {% for pic in pics %}
+            <div class="col-sm-6 col-md-4 card">
+                <img src="{{pic.your_image.url}}" class="img-responsive" alt="Image" style="height:300px;width:100%;">
+                <h3>{{pic.image_name}}</h3>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
 </div>
+
 {% endblock %}
