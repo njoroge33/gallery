@@ -18,3 +18,8 @@ def search_results(request):
     else:
         message = "You have not searched for any picture"
         return render(request, 'search.html', {"message": message})
+
+def location_images(request, location):
+    images = Images.get_by_location(location)
+
+    return render(request, 'location.html', {"images":images})

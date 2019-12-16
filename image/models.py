@@ -30,4 +30,11 @@ class Images(models.Model):
 
         return photos
 
+    @classmethod
+    def get_by_location(cls, location):
+        images = Images.objects.filter(location__location_name__icontains=location).all()
+
+        return images
+
+
         
