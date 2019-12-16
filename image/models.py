@@ -18,3 +18,11 @@ class Images(models.Model):
     def get_images(cls):
         images = cls.objects.all()
         return images
+
+    @classmethod
+    def search_by_category(cls, search_word):
+        photo = cls.object.filter(category_entered_name=search_word)
+
+        return photo
+
+        
